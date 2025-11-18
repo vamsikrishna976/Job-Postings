@@ -1,11 +1,11 @@
 ﻿// src/utils/api.js
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || "https://job-postings.onrender.com/";
+const API_URL = import.meta.env.VITE_API_URL || "https://job-postings.onrender.com";
 
 export async function fetchJobs() {
   try {
-    const url = '${API_URL}/jobs';
+    const url = `${API_URL}/jobs`;
     console.info("[API] Calling:", url);
     const res = await axios.get(url, { timeout: 15000 });
     const data = res?.data;
