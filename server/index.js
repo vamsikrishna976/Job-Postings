@@ -20,7 +20,7 @@ function normalizeDate(d) {
   if (typeof d === "number") {
     if (d < 1e12) return new Date(d * 1000).toISOString();
     return new Date(d).toISOString();
-  }
+  }a
   try { return new Date(d).toISOString(); } catch { return null; }
 }
 
