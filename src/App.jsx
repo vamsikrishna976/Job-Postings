@@ -96,7 +96,7 @@ export default function App(){
         </main>
 
         <footer className="mt-12 text-slate-500 text-sm">
-          Built with free job APIs — Remotive & ArbeitNow. Deploy on Vercel for instant serverless API support.
+          Built with Remotive & ArbeitNow.
         </footer>
       </div>
     </div>
