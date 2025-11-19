@@ -1,22 +1,60 @@
-# Jobs Portal
+# 🚀 Job Portal Web Application
 
-A small job-aggregator built with **React (Vite)** + **Tailwind**, and an **Express** backend that fetches jobs from free public APIs (ArbeitNow, TheMuse, Remotive).
+A full-stack Job Portal that aggregates job listings from multiple public job APIs and delivers a clean, fast, and responsive user experience.  
+Built with **React + Vite**, **TailwindCSS**, and a custom backend using **Node.js + Express**.  
+Deployed on **Vercel** (frontend) and **Render** (backend).
 
-## Features
-- Dark / Light theme toggle
-- Search & filters
-- Pagination
-- Local bookmarks
-- Easy deploy: Frontend on Vercel, backend on Render
+---
 
-## Local development
+## ⭐ Features
 
-```bash
-# install deps
-npm install
+### 🔹 Job Aggregation (ArbeitNow + TheMuse)
+- Fetches real jobs from both APIs
+- Normalizes fields (title, company, description, date, location)
+- Merges and sorts job posts by newest date
 
-# start backend
-node server/index.js
+### 🔹 Frontend Features
+- Keyword search (title, company, description)
+- Source filter (ArbeitNow / TheMuse / Both)
+- “Only Today” date filter
+- Pagination (6 / 9 / 12 per page)
+- Dark & Light theme toggle
+- Real-time results count
+- Fully responsive UI
+- Loading state + fallback UI
 
-# start frontend
-npm run dev
+### 🔹 Backend Features
+- Node.js + Express server
+- Server-side caching (5-minute TTL)
+- No-store cache headers → always fresh data
+- Health endpoint (`/`) for uptime checks
+- Error-safe normalization and fallback responses
+
+---
+
+## 🏗 Architecture
+
+**Frontend**
+- React (Hooks, useEffect, useMemo)
+- Vite
+- TailwindCSS  
+- Axios
+
+**Backend**
+- Node.js
+- Express
+- node-fetch
+
+**Deployment**
+- Vercel (frontend)
+- Render (backend)
+- UptimeRobot for keep-alive
+
+---
+
+## 📡 API Endpoints
+
+### `GET /`
+Returns health status:
+```json
+{ "ok": true, "time": "2025-11-19T12:00:00.000Z" }
