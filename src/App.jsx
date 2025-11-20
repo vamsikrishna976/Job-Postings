@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useMemo} from 'react'
+import { Analytics } from "@vercel/analytics/next"
 import Header from './components/Header'
 import JobCard from './components/JobCard'
 import Pagination from './components/Pagination'

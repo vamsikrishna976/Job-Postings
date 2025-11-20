@@ -11,12 +11,15 @@
     "start": "node server/index.js"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "axios": "^1.4.0",
     "clsx": "^1.2.1",
     "cors": "^2.8.5",
     "dayjs": "^1.11.9",
     "express": "^5.1.0",
     "node-fetch": "^3.3.2",
+    "nodeman": "^1.1.2",
+    "nodemon": "^3.1.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

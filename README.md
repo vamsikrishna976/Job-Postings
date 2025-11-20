@@ -58,3 +58,46 @@ Deployed on **Vercel** (frontend) and **Render** (backend).
 Returns health status:
 ```json
 { "ok": true, "time": "2025-11-19T12:00:00.000Z" }
+
+GET /jobs
+
+Returns merged normalized job array:
+
+json
+
+[
+  {
+    "id": "...",
+    "title": "Software Engineer",
+    "company": "Example",
+    "location": "Remote",
+    "source": "ArbeitNow"
+  }
+]
+
+## 🛠 Setup Instructions
+
+**Backend**
+
+cd server
+npm install
+npm start
+
+
+**Frontend**
+
+cd frontend
+npm install
+npm run dev
+
+
+🚀 Deployment
+
+Frontend → Vercel
+
+Backend → Render
+
+Add UptimeRobot ping to prevent backend sleep
+
+
+
